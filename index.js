@@ -9,7 +9,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render(process.cwd() + '/views/index');
+    res.render(process.cwd() + '/views/index', { page: "cool"});
 });
 
 app.listen(port, () => console.log(`Insta API app listening on port ${port}!`));
